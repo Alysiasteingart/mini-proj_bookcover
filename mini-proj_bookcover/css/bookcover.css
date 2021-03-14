@@ -1,0 +1,195 @@
+html {
+    background-color: #262626;  
+}
+
+
+.bookcover  {
+    height: 600px;
+    width: 380px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background: repeating-linear-gradient(
+        90deg,
+        #eee9de 0px,
+        #eee9de 16.5px,
+        #262626 16.5px,
+        #262626 18px);
+    animation: stripes 10s linear;
+    animation-iteration-count: initial;
+    animation-delay: .25s;
+    animation-fill-mode: forwards;
+} 
+
+.container01 {
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /*background-color: tan; */
+}
+
+@font-face  {
+    font-family: 'Aperto';
+    src: url(../fonts/aperto-regular.otf) format('opentype');
+}
+
+.title  {
+    font-family: 'Aperto';
+    font-size: 6em;
+    letter-spacing: .05em;
+    text-align: center;
+    color: white;
+    text-shadow:    1px 1px 0px #6b6b66,
+                    2px 2px 0px #6b6b66,
+                    3px 3px 0px #6b6b66,
+                    4px 4px 0px #6b6b66,
+                    5px 5px 0px #6b6b66,
+                    5.5px 5.5px 0px #6b6b66;
+}
+
+.subtitle {
+    font-family: futura-pt, sans-serif;
+    font-weight: 550;
+    font-style: normal;
+    font-size: .82em;
+    letter-spacing: .05em;
+    text-align: center;
+    line-height: 26.5px;
+
+    color: #6B6B6B;
+    background: white;
+    width: 220px;
+    height: 25px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-27.5%, 0);
+    box-shadow: 1px 1px 0px #6b6b66,
+                2px 2px 0px #6b6b66,
+                3px 3px 0px #6b6b66,
+                4px 4px 0px #6b6b66,
+                5px 5px 0px #6b6b66;
+}
+
+.award {
+    font-family: classico-urw, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: .9em;
+    
+    letter-spacing: .04em;
+    text-align: center;
+    line-height: 17px;
+    transform: rotate(-8deg);
+    padding-top: 15.5px;
+    box-sizing: border-box;
+
+    color: white;
+    background: #8C7B5A;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 100%;
+    top: 10%;
+    left: 10%;
+
+    box-shadow: none;
+    /* x offset, y offset, blur size, spread size, color */
+}
+
+.award:hover {
+    box-shadow: inset 0px 0px 20px #262626;
+     /* x offset, y offset, blur size, spread size, color */
+}
+
+.cutout01 {
+    width: 135px;
+    height: 135px;
+    background: #262626;
+    position: relative;
+    top: 25%;
+    left: 50%;
+    transform: translate(-15%, -25%);
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.person {
+    position: relative;
+    width: 100%;
+}
+
+
+.arm {
+    width: 135px;
+    position: relative;
+    top: -168.5px;
+    left: 151px;
+    z-index: -1;
+
+    animation: arm .5s linear forwards;
+    animation-delay: 1s;
+}
+
+
+.cutout02 {
+    width: 137px;
+    height: 137px;
+    border-radius: 100%;
+    opacity: 100%;
+
+    background-size: 500% 500%;
+    background-image: repeating-linear-gradient(
+        0deg,
+        #eee9de 0px,
+        #eee9de 14.5px,
+        #262626 14.5px,
+        #262626 16px);
+
+    animation: stripes_small 10s linear;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+.cover  { 
+    width: 137px;
+    height: 137px;
+    position: relative;
+    top: 59px;
+    left: 207px;
+    transform-origin: 50% 50%;
+    animation: cover 1s linear forwards;
+    animation-delay: .5s;
+    animation-timing-function: ease-in;
+}
+
+/*    !!!--- ANIMATION ---!!!      */
+
+@keyframes stripes {
+    0%      { background-position: 0px;}
+    100%    { background-position: 400px;}
+}
+
+@keyframes stripes_small {
+    0%      { background-position: 0px 0px;}
+    100%    { background-position: 0px -200px;}
+}
+
+@keyframes arm {
+    0%      { transform: translate(0px, 0px);}
+    100%    { transform: translate(40px, -90px);}
+}
+
+@keyframes cover {
+    0%      { transform: translate(0px, 0px) rotate(0deg); }
+    /*50%     { transform: rotate(90deg); } */
+     /*{ transform: translate(44.5%, 18%) rotate(180deg);}*/
+     
+    100%    { transform: translate(-57px, -94px) rotate(90deg);}
+
+}
